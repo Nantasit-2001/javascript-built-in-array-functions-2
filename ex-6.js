@@ -5,7 +5,7 @@ function updateCarCollection(carBrand) {
       carCollection.push(carBrand)
       return `new car collection is : ${carCollection}`
     } else {
-      return `${carBrand} has already existed in the 1 position of car collection`
+      return `${carBrand} has already existed in the  ${carCollection.indexOf(carBrand)+1} position of car collection`
     }
 }
 

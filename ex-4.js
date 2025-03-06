@@ -390,4 +390,5 @@ const totalMembers = bills.filter(checkMember => checkMember.member != null).red
       return acc
 },[])
 
+
 console.log(`Unique Members Count: ${totalMembers.length}`)

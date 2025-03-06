@@ -374,5 +374,5 @@ const bills = [
 ];
 
 // Start coding here
-const billMember = bills.filter(checkMember => checkMember.member != undefined).map(memberName => memberName.member.name)
+const billMember = bills.filter(checkMember => checkMember.member != null).map(memberName => memberName.member.name)
 console.log(billMember)
