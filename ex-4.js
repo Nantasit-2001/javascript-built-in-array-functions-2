@@ -374,4 +374,22 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+
+// const uniqueMembersCount = (bills) =>{
+//   let arr = bills.filter(obj => obj.member!==null)
+//   arr=arr.map((obj) => obj.member.name);
+
+//   let temp = [];
+//   for (let value of arr){
+//     if(temp.includes(value) === false)
+//     temp.push(value);
+//   }
+//   console.log (temp.length);
+// }
+// const totalMembers2 = uniqueMembersCount(bills);
+
+const totalMembers  = "Unique Members Count: " + bills.filter(obj => obj.member!==null)
+                            .map((obj) => obj.member.name)                      
+                            .filter((name,index,arr) => arr.indexOf(name)===index)
+                            .length
+console.log(totalMembers)

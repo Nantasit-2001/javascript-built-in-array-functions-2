@@ -374,5 +374,18 @@ const bills = [
 ];
 
 // Start coding here
+const locationPrice = (bills) =>{
+    return bills.reduce(functionLocationAndTotal,{})
+}
+function functionLocationAndTotal(acc,bill){
+    if (bill.location in acc ){
+        acc[bill.location] = acc[bill.location] + bill.total;
+    }else{
+        acc[bill.location] = bill.total
+    }
+    return acc
+}
+   
 
-const totalPaidByLocation;
+const totalPaidByLocation = locationPrice(bills);
+console.log(totalPaidByLocation)
