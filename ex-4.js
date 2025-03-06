@@ -373,5 +373,21 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+//Start coding here
+// const totalMembers = bills.filter(checkMember => checkMember.member != null).map(memberName => memberName.member.name).reduce(dupicate,[])
+
+// function dupicate (acc,name) {
+//   if (!acc.includes(name)){
+//     acc.push(name)
+//   }
+//   return acc
+// }
+
+const totalMembers = bills.filter(checkMember => checkMember.member != null).reduce((acc,cur) => {
+      if (!acc.includes(cur.member.name)){
+        acc.push(cur.member.name)
+      }
+      return acc
+},[])
+
+console.log(`Unique Members Count: ${totalMembers.length}`)

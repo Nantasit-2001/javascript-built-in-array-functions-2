@@ -373,6 +373,32 @@ const bills = [
     },
 ];
 
-// Start coding here
+function totalPaidByLocation (bills) {
+   return bills.reduce((acc,cur) => {
 
-const totalPaidByLocation;
+        if (acc[cur.location]){
+            acc[cur.location] += cur.total
+        } else {
+            acc[cur.location] = cur.total
+        }
+        return acc
+    }
+    ,{})
+}
+
+console.log(totalPaidByLocation(bills))
+
+
+// Function no build-in
+// function totalPaidByLocation (bills) {
+//     let province = {}
+//     for (let i = 0; i < bills.length; i++){
+//         let item = bills[i].location
+//         if(province[item]){
+//             province[item] += bills[i].total
+//         }else{
+//             province[item] = bills[i].total
+//         }
+//     }
+//  return province
+// }
