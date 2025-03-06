@@ -374,5 +374,14 @@ const bills = [
 ];
 
 // Start coding here
+const newBills = [];
+function onlyMemberData(array){
+  let result = array.filter( (item)=> item.member !== null ); 
+  return newBills.push(result); 
+  
+  
+}
+onlyMemberData(bills)
+console.log(newBills); 
 
-const newBills;
+

@@ -1,7 +1,10 @@
 let crimeRecordNames = ["Theodora Milenko", "Tinashe Benigno", "Mahalia Priyanka", "Maisy Sudhir"];
 
 function searchCrimeRecord(name) {
-  // Start coding here
+  let checkBoolean = crimeRecordNames.includes(name); 
+  let result = checkBoolean== true ?  `${name}has crime record !!!` : `${name}has no crime record`; 
+  return result; 
+ 
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case

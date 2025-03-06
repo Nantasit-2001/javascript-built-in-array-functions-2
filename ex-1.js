@@ -374,3 +374,9 @@ const bills = [
 ];
 
 // Start coding here
+function summarizedFunc(array){
+  let result = array.reduce((a,b)=>a+b.total,0); 
+  return `Total bill transaction is ${result}`; 
+}
+
+console.log(summarizedFunc(bills)); 

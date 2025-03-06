@@ -373,5 +373,36 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+// Show only who have member data 'fuction' 
+function onlyMemberData(array){
+  let result = array.filter( (item)=> item.member !== null ); 
+  return result; 
+}
+const newBills = onlyMemberData(bills);
+// console.log(newBills); 
+
+// show only member's name 'fuction' 
+function showName(array) {
+  let output = array.map((item)=> item.member.name); 
+  return output;
+}
+const billMembers = showName(newBills) ;
+console.log(billMembers); 
+
+// counting name without repeating 
+function countName(array) {
+    let finalResult = array.reduce( function (a,b) {
+      if (!a.includes(b) ) {
+        a.push(b);}
+        return a;
+      },[])
+      return finalResult;
+
+  }
+ 
+const totalMembers = countName(billMembers); 
+console.log(`Unique Members Count: ${totalMembers.length}`)
+
+
+
+

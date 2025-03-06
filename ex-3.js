@@ -373,5 +373,21 @@ const bills = [
   },
 ];
 
-// Start coding here
-const billMembers;
+// Show only who have member data 'fuction' 
+function onlyMemberData(array){
+  let result = array.filter( (item)=> item.member !== null ); 
+  return result; 
+}
+const newBills = onlyMemberData(bills);
+// console.log(newBills); 
+
+// show only member's name 'fuction' 
+function showName(array) {
+  let output = array.map((item)=> item.member.name); 
+  return output;
+}
+
+
+
+const billMembers = showName(newBills) ;
+console.log(billMembers); 
